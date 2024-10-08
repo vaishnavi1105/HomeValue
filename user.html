@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login and Signup - HomeValue</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 40%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-toggle {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .form-toggle button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 0 5px;
+        }
+
+        .form-toggle button.active {
+            background-color: #2980b9;
+        }
+
+        .form-section {
+            display: none;
+        }
+
+        .form-section.active {
+            display: block;
+        }
+
+        .form-section label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .form-section input[type="text"],
+        .form-section input[type="password"],
+        .form-section input[type="email"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .form-section input[type="submit"] {
+            background-color: #27ae60;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .form-section input[type="submit"]:hover {
+            background-color: #2ecc71;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #95a5a6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="user.html">User</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>User Authentication</h1>
+
+        <div class="form-toggle">
+            <button id="loginBtn" class="active">Login</button>
+            <button id="signupBtn">Signup</button>
+        </div>
+
+        <!-- Login Form -->
+        <div id="loginForm" class="form-section active">
+            <form action="user_dashboard.html" method="POST">
+                <label for="loginUsername">Username:</label>
+                <input type="text" id="loginUsername" name="loginUsername" required>
+
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" name="loginPassword" required>
+
+                <input type="submit" value="Login">
+            </form>
+        </div>
+
+        <!-- Signup Form -->
+        <div id="signupForm" class="form-section">
+            <form action="user_dashboard.html" method="POST">
+                <label for="signupUsername">Username:</label>
+                <input type="text" id="signupUsername" name="signupUsername" required>
+
+                <label for="signupEmail">Email:</label>
+                <input type="email" id="signupEmail" name="signupEmail" required>
+
+                <label for="signupPassword">Password:</label>
+                <input type="password" id="signupPassword" name="signupPassword" required>
+
+                <input type="submit" value="Sign Up">
+            </form>
+        </div>
+        <button style="background-color: #3498db; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+            View Property Enhancement Ideas
+        </button>
+        <button style="background-color: #3498db; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+            Submit Property Details
+        </button>
+        <button style="background-color: #3498db; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+            Engagement and Support
+        </button>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 HomeValue. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const loginBtn = document.getElementById('loginBtn');
+        const signupBtn = document.getElementById('signupBtn');
+        const loginForm = document.getElementById('loginForm');
+        const signupForm = document.getElementById('signupForm');
+
+        loginBtn.addEventListener('click', () => {
+            loginForm.classList.add('active');
+            signupForm.classList.remove('active');
+            loginBtn.classList.add('active');
+            signupBtn.classList.remove('active');
+        });
+
+        signupBtn.addEventListener('click', () => {
+            signupForm.classList.add('active');
+            loginForm.classList.remove('active');
+            signupBtn.classList.add('active');
+            loginBtn.classList.remove('active');
+        });
+    </script>
+</body>
+</html>

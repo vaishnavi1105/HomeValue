@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - HomeValue</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 40%;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login-form label {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .login-form input[type="submit"] {
+            background-color: #2980b9;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .login-form input[type="submit"]:hover {
+            background-color: #3498db;
+        }
+
+        .error {
+            color: red;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #95a5a6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="user.html">User</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Admin Login</h1>
+        <!-- Display error message here -->
+        <div class="error">
+            <!-- This can be dynamically populated via a backend system -->
+        </div>
+
+        <form class="login-form" action="admin_dashboard.html" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <input type="submit" value="Login">
+        </form>
+        <button style="background-color: #3498db; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+            Curate Property Improvement Recommendations
+        </button>
+        <button style="background-color: #3498db; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+            Manage Property Listings
+        </button>
+        
+    </div>
+
+    <footer>
+        <p>&copy; 2024 HomeValue. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
